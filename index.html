@@ -1,0 +1,310 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./css/81style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;300;400;500;700;900&display=swap"
+        rel="stylesheet">
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css" integrity="sha384-DNOHZ68U8hZfKXOrtjWvjxusGo9WQnrNx2sqG0tfsghAvtVlRW3tvkXWZh58N9jp" crossorigin="anonymous">    
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script>
+        $(function () {
+            $(".headC").click(function () {
+                $(".headB").slideToggle();
+            });
+        });
+    </script>
+
+
+</head>
+
+<body bgcolor="#0d0d0d">
+    <header>
+        <div class="container">
+            <div class="container-small">
+                <a href="index_main.html" class="headA">E-Book</a>
+                <button type="button" class="headC">
+                    <span class="fa fa-bars" title="MENU"></span>
+                </button>
+            </div>
+            <nav class="headB">
+                <ul>
+                    <li><a href="index_main.html">홈</a></li>
+                    <li><a href="../81team/html/index_login.html">로그인</a></li>
+                </ul>
+            </nav>
+        </div>
+
+    </header>
+
+    <section class="introduction">
+        <div class="text-wrap">
+            <h1>당신의, 당신에 의한, 당신을 위한<br>81만권의 도서</h1>
+            <p>첫 달 무료 구독을 통해 <br>어떤 도서가 있는지 확인해보세요 </p>
+
+
+        </div>
+    </section>
+
+
+
+    <section class="slide">
+        <div class="slideshow-container">
+
+            <div class="mySlides fade">
+                <div class="numbertext">1 / 3</div>
+                <img src="./images/slide2.JPG" style="width:100%">
+                <div class="text"></div>
+            </div>
+
+            <div class="mySlides fade">
+                <div class="numbertext">2 / 3</div>
+                <img src="./images/slide3.JPG" style="width:100%">
+                <div class="text"></div>
+            </div>
+
+            <div class="mySlides fade">
+                <div class="numbertext">3 / 3</div>
+                <img src="./images/slide4.JPG" style="width:100%">
+                <div class="text"></div>
+            </div>
+
+            <a class="prev" onclick="plusSlides(-1)">❮</a>
+            <a class="next" onclick="plusSlides(1)">❯</a>
+
+        </div>
+        <br>
+
+        <div style="text-align:center">
+            <span class="dot" onclick="currentSlide(1)"></span>
+            <span class="dot" onclick="currentSlide(2)"></span>
+            <span class="dot" onclick="currentSlide(3)"></span>
+        </div>
+        <script>
+            let slideIndex = 1;
+            showSlides(slideIndex);
+
+            function plusSlides(n) {
+                showSlides(slideIndex += n);
+            }
+
+            function currentSlide(n) {
+                showSlides(slideIndex = n);
+            }
+
+            function showSlides(n) {
+                let i;
+                let slides = document.getElementsByClassName("mySlides");
+                let dots = document.getElementsByClassName("dot");
+                if (n > slides.length) { slideIndex = 1 }
+                if (n < 1) { slideIndex = slides.length }
+                for (i = 0; i < slides.length; i++) {
+                    slides[i].style.display = "none";
+                }
+                for (i = 0; i < dots.length; i++) {
+                    dots[i].className = dots[i].className.replace(" active", "");
+                }
+                slides[slideIndex - 1].style.display = "block";
+                dots[slideIndex - 1].className += " active";
+            }
+        </script>
+    </section>
+
+    <section class="introduction">
+        <div class="text-wrap">
+            <h1>싹 다 무제한<br>4990원</h1>
+            <p>모든 장르<br>각 종 베스트셀러</p>
+        </div>
+    </section>
+
+    <section class="conA" >
+        <div class="conbookA">
+            <div class="textboxA">
+                <ul class="bookA">
+                    <li class="bp">
+                        <div class="bpp">
+                            <img src="./images/1book.JPG" alt="">
+                            <p>불편한 편의점2 - 김호연</p>
+                        </div>
+                    </li>
+                    <li class="bp">
+                        <div class="bpp">
+                            <img src="./images/2book.JPG" alt="">
+                            <p>역행자 - 자청</p>
+                        </div>
+                    </li>
+                    <li class="bp">
+                        <div class="bpp">
+                            <img src="./images/3book.JPG" alt="">
+                            <p>호감 가는 말투에는 비밀이 있다 <br> - 장신웨</p>
+                        </div>
+                    </li>
+                    <li class="bp">
+                        <div class="bpp">
+                            <img src="./images/4book.JPG" alt="">
+                            <p>기억력 천재 게으른 뇌를 깨워라 <br> - 개러스무어</p>
+                        </div>
+                    </li> <br>
+                    <li class="bp">
+                        <div class="bpp">
+                            <img src="./images/5book.JPG" alt="">
+                            <p>문명1 - 베르나르 베르베르</p>
+                        </div>
+                    </li>
+                    <li class="bp">
+                        <div class="bpp">
+                            <img src="./images/6book.JPG" alt="">
+                            <p>주린이가 가장 알고 싶은 <br> 최다질문 TOP77 <br> - 원앤원컨텐츠그룹</p>
+                        </div>
+                    </li>
+                    <li class="bp">
+                        <div class="bpp">
+                            <img src="./images/7book.JPG" alt="">
+                            <p>난생 처음 주식 투자 - 라온북</p>
+                        </div>
+                    </li>
+                    <li class="bp">
+                        <div class="bpp">
+                            <img src="./images/8book.JPG" alt="">
+                            <p>인간관계가 힘들어서 <br> 퇴사했습니다 - 안나</p>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </section> <hr>
+
+    <section class="conB">
+        <div class="text-wrap">
+            <h1>언제든 해지 가능! <br>첫 달 무료로 가볍게 </h1>
+            <p>상황에 맞게 원하는 요금제를 <br>자유롭게 선택하세요 </p>
+        </div>
+        <div class="price-wrap">
+            <ul class="price-list">
+                <li>
+                    <strong>전자책 정기구독</strong>
+                    <div class="month">
+                        <span>월</span>
+                        <p>4,990
+                            <b>원</b>
+                        </p>
+                    </div>
+                    <div class="year">
+                        <div class="basic-price">
+                            <p>59,880</p>
+                            <img src="https://d3udu241ivsax2.cloudfront.net/v3/images/brand/discount.8f423f8b2d39ebc92448a033200683ab.png" alt="전자책 정기구독">
+                        </div>
+                        <div class="discount-price">
+                            <span>연</span>
+                            <p>49,940
+                                <b>원</b>
+                            </p>
+                        </div>
+                    </div>
+                    <p>E-Book에서 제공하는 콘텐츠를 무제한으로</p>
+                </li>
+                <li>
+                    <strong>종이책 정기구독</strong>
+                    <div class="month">
+                        <span>월</span>
+                        <p>10,990
+                            <b>원</b>
+                        </p>
+                    </div>
+                    <div class="year">
+                        <div class="basic-price">
+                            <p>131,880</p>
+                            <img src="https://d3udu241ivsax2.cloudfront.net/v3/images/brand/discount02.1b7dc622a702906821e8c9bf6120c15a.png" alt="종이책 정기구독">
+                        </div>
+                        <div class="discount-price">
+                            <span>연</span>
+                            <p>119,088
+                                <b>원</b>
+                            </p>
+                        </div>
+                    </div>
+                    <p>E-Book의 모든 콘텐츠를 무제한으로 보고 <br>2달에 1번 종이책+전자책 배송까지</p>
+                </li>
+            </ul>
+            <ul class="refund-list">
+                <li>
+                    <img src="https://d3udu241ivsax2.cloudfront.net/v3/images/brand/price01.d638e23876085f686632b1e9410616c3.png" alt="무료 체험 기간 동안 해지해도 금액이 청구되지 않아요">
+                    <p>무료 체험 기간 동안 해지해도 <br> 금액이 청구되지 않아요</p>
+                </li>
+                <li>
+                    <img src="https://d3udu241ivsax2.cloudfront.net/v3/images/brand/price02.94d35cb1e54610f94749dc24cb1b0e70.png" alt="유료 결제되어도 사용 이력이 없으면 즉시 환불해드려요">
+                    <p>유료 결제되어도 사용 이력이 <br>없으면 즉시 환불해드려요</p>
+                </li>
+            </ul>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <div class="footA">
+                <h2>E-Book</h2>
+                <p>E-book 판매 사이트 <br> <a href="http://logger.net">http://E-book.net</a></p>
+                <nav class="footD">
+                    <ul>
+                        <li><a href=""><i class="fab fa-twitter"></i></a></li>
+                        <li><a href=""><i class="fab fa-facebook"></i></a></li>
+                        <li><a href=""><i class="fab fa-google-plus"></i></a></li>
+                        <li><a href=""><i class="fab fa-instagram"></i></a></li>
+                        <li><a href=""><i class="fab fa-youtube"></i></a></li>
+                    </ul>
+                </nav>
+            </div>
+            <nav class="footB">
+                <div>
+                    <h3>ABOUT</h3>
+                    <ul>
+                        <li><a href="#">설립</a></li>
+                        <li><a href="#">주소</a></li>
+                        <li><a href="#">지도</a></li>
+                        <li><a href="#">스태프</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h3>SUPPORT</h3>
+                     <ul>
+                         <li><a href="#">다운로드</a></li>
+                         <li><a href="#">매뉴얼</a></li>
+                         <li><a href="#">자주 묻는 질문</a></li>
+                         <li><a href="#">문의</a></li>
+                     </ul>
+                    </div> 
+                     <div>
+                    <h3>CONTENTS</h3>
+                     <ul>
+                         <li><a href="#">공지사항</a></li>
+                         <li><a href="#">비즈니스</a></li>
+                         <li><a href="#">프로필</a></li>
+                         <li><a href="#">개발자</a></li>
+                         <li><a href="#">블로그</a></li>
+                     </ul>
+                    </div> 
+            </nav>
+            <div class="footC">
+                &copy; E-Book corp. All rights Reserved.
+            </div>
+        </div>
+    </footer>
+    <button class="floating"><a href="./html/index_login.html" class="btnlink">
+        <b>첫 달 무료</b>로 독서 시작하기 </a>
+    </button>
+
+    
+</body>
+
+</html>
+
+
+
+
+ 
